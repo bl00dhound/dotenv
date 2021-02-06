@@ -1,0 +1,14 @@
+# common aliases
+alias lls="ls -lah"
+alias zpd="source ~/.zshrc"
+alias start="~/tmux_work_session.sh"
+
+# docker aliases
+alias docker-sleep="docker stop $(docker ps -q)"
+alias docker-clear="docker container rm -f $(docker ps -qa)"
+
+# AAH aliases
+
+# more aliases
+alias ds="docker-sleep"
+alias dc="docker-clear"

@@ -4,7 +4,7 @@ export TERM="xterm-256color"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/oleksii/.oh-my-zsh"
+export ZSH="/Users/oleksii.kuznietsov/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -103,13 +103,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias docker-sleep="docker ps -q | xargs -I {} bash -c 'docker stop "{}"'"
-alias delete-branches="cat ~/Projects/deleted_branches.git | xargs -I {} bash -c 'git branch -D {}'"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+if [ -f ~/.zsh_aliases ]; then
+. ~/.zsh_aliases
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# nvm stuff there
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 export PATH="/usr/local/sbin:$PATH"
 export LC_ALL=en_US.UTF-8
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
