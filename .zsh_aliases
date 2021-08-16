@@ -3,12 +3,30 @@ alias lls="ls -lah"
 alias zpd="source ~/.zshrc"
 alias start="~/tmux_work_session.sh"
 
-# docker aliases
-alias docker-sleep="docker stop $(docker ps -q)"
-alias docker-clear="docker container rm -f $(docker ps -qa)"
+# docker/k8 aliases
+alias docker-sleep="docker stop \$(docker ps -q)"
+alias docker-clear="docker container rm -f \$(docker ps -qa)"
+alias dcv="docker volume rm -f \$(docker volume ls -q)"
+alias dp="docker system prune --force"
+alias k="kubectl"
+alias dk="docker"
+alias kg="kubectl get"
+alias kd="kubectl delete"
+alias switch-desktop="kubectl config use-context docker-desktop"
+alias set-aws="source ~/Scripts/BASH/aws_creds.sh"
+alias kdpv="kubectl delete pv --all"
+alias kdpvc="kubectl delete pvc --all"
+alias kdj="kubectl delete jobs --all"
+alias kdf="kubectl delete pod --grace-period 0 --force"
+alias cns="kubectl config set-context --current --namespace "
+alias kdbootstrap="kubectl delete jobs bootstrap && kubectl delete pod \$(kubectl get pods --selector=job-name=bootstrap | cut -d' ' -f 1) --force --grace-period 0"
 
-# AAH aliases
 
 # more aliases
 alias ds="docker-sleep"
 alias dc="docker-clear"
+alias sv="set-vars"
+alias p8="ping 8.8.8.8"
+alias alist="cat ~/.zsh_aliases | grep '.*=.*' | cut -d' ' -f2-"
+
+# Keycloak stuff

@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/bin:/usr/local/go/bin:$HOME/.cargo/bin:$PATH
 export TERM="xterm-256color"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home
 
@@ -119,3 +119,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="/usr/local/sbin:$PATH"
 export LC_ALL=en_US.UTF-8
+source <(kubectl completion zsh)
+complete -F __start_kubectl k
+export PATH="/usr/local/opt/libpq/bin:$PATH"
