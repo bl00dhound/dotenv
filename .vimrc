@@ -37,6 +37,9 @@ Plug 'vim-airline/vim-airline' " Status bar
 
 Plug 'airblade/vim-gitgutter'
 
+" Rust language plugin
+Plug 'rust-lang/rust.vim'
+
 " Plug 'valloric/youcompleteme'
 
 " for autocomplete instead 'youcompleteme'
@@ -137,6 +140,7 @@ set nu
 set nocompatible
 "set list lcs=tab:\|\ 
 syntax enable
+set bg=dark
 
 " from fastfold plugin
 nmap zuz <Plug>(FastFoldUpdate)
