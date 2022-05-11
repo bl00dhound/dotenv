@@ -1,10 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/go/bin:$HOME/.cargo/bin:$PATH
 export TERM="xterm-256color"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/oleksii.kuznietsov/.oh-my-zsh"
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -14,7 +13,7 @@ source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs node_version)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv node_version)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -74,7 +73,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs node_v
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(systemd globalias git git-flow extract last-working-dir git-prompt colored-man-pages cp redis-cli httpie docker docker-compose pip git-auto-fetch)
+plugins=(systemd globalias git git-flow extract last-working-dir git-prompt colored-man-pages cp redis-cli httpie docker docker-compose pip git-auto-fetch virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
